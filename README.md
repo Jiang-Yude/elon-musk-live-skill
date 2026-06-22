@@ -1,5 +1,7 @@
 # elon-musk-live-skill
 
+![活的馬斯克技能包海報](assets/live-musk-skill-poster.png)
+
 活的馬斯克技能包。這不是馬斯克本人，也不冒充本人發言；它是一個以公開資料為基礎、可每日更新、可追溯、可審核的 inspired-by 思維顧問技能包。
 
 這個版本從 `alchaincyf/elon-musk-skill` 的靜態快照出發，加入每日資料更新流程：
@@ -48,3 +50,12 @@ bash scripts/run_daily_update.sh
 本倉包含上游 `alchaincyf/elon-musk-skill` 與 `alchaincyf/nuwa-skill` 的快照作為初始材料與方法論參考，相關授權檔保留在 `references/upstream/`。
 
 本倉新增的 live update wrapper、資料流規則與本地改造內容以 MIT License 釋出。
+
+## 江江教練
+
+- Threads：https://www.threads.com/@jiang_yude_coach
+- YouTube：https://www.youtube.com/@aipkmcc
+- Instagram：https://www.instagram.com/jiang_yude_coach/
+- 知識官網：https://ai-km-jiang.vercel.app/
+- LINE 社群：https://line.me/R/ti/g2/V63_43ngbs_kq1mpVc9LlxXB-1kchHnwdsy3WQ
+- GitHub：https://github.com/Jiang-Yude
