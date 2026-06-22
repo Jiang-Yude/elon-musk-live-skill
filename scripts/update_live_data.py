@@ -340,6 +340,8 @@ def write_daily_digest(path: Path, date_key: str, items: list[dict], errors: lis
         "",
         f"更新時間：{now_taipei().strftime('%Y-%m-%d %H:%M %Z')}",
         "",
+        "> 來源說明：以下多數為媒體新聞與外界評論，屬他人報導與解讀，並非 Elon Musk 本人立場，也不代表本技能包作者立場。新聞與評論可能有誤、過時或具爭議，引用前請自行查證原始出處。",
+        "",
         "## 摘要",
         "",
         f"- 新增項目：{len(items)}",

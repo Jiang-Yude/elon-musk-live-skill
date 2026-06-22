@@ -9,5 +9,6 @@
 *.sqlite3
 *.db
 references/live-data/logs/
+references/live-data/state/
 __pycache__/
 *.pyc
