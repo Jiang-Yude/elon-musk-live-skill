@@ -1,0 +1,10 @@
+{
+  "ran_at": "2026-06-22T14:18:16.346399+08:00",
+  "date": "2026-06-22",
+  "new_items": 40,
+  "errors": [
+    "x: skipped because X_BEARER_TOKEN is not set"
+  ],
+  "raw_path": "/Users/jiangyude2/Documents/repo-workspace/elon-musk-live-skill/references/live-data/raw/2026-06-22.jsonl",
+  "digest_path": "/Users/jiangyude2/Documents/repo-workspace/elon-musk-live-skill/references/live-data/daily/2026-06-22 daily-digest.md"
+}

@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env.*
+*.token
+*.secret
+*.key
+*.pem
+*.sqlite
+*.sqlite3
+*.db
+references/live-data/logs/
+__pycache__/
+*.pyc

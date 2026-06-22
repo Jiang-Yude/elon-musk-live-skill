@@ -1,0 +1,35 @@
+{
+  "x": {
+    "enabled": true,
+    "username": "elonmusk",
+    "max_results": 10,
+    "public_profile_enabled": true,
+    "public_profile_recent_days": 7
+  },
+  "rss_feeds": [
+    {
+      "id": "google-news-elon-musk-en",
+      "label": "Google News: Elon Musk",
+      "tier": "news_report",
+      "url": "https://news.google.com/rss/search?q=%22Elon%20Musk%22%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "id": "google-news-elon-musk-zh",
+      "label": "Google News: 馬斯克",
+      "tier": "news_report",
+      "url": "https://news.google.com/rss/search?q=%E9%A6%AC%E6%96%AF%E5%85%8B%20when%3A1d&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+    },
+    {
+      "id": "google-news-xai",
+      "label": "Google News: xAI and Musk",
+      "tier": "news_report",
+      "url": "https://news.google.com/rss/search?q=%22Elon%20Musk%22%20xAI%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "id": "google-news-tesla-spacex",
+      "label": "Google News: Tesla SpaceX Musk",
+      "tier": "news_report",
+      "url": "https://news.google.com/rss/search?q=%22Elon%20Musk%22%20%28Tesla%20OR%20SpaceX%20OR%20Starlink%29%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+    }
+  ]
+}
