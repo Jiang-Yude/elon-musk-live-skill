@@ -18,23 +18,36 @@
 
 ## 每日更新做什麼
 
-1. 讀取 `references/source-config.json`
-2. 抓取 RSS 新聞與評論
-3. 嘗試讀取 `@elonmusk` 公開 X 個人頁 7 天內可見貼文，標記為 `musk_direct_public_web`
-4. 若環境變數 `X_BEARER_TOKEN` 存在，額外抓取 `@elonmusk` X API
-5. 用 `state/seen-ids.json` 去重
-6. 寫入當日 JSONL 原始資料
-7. 產出每日 Markdown 摘要
-8. 記錄錯誤到 `logs/`
+每日任務更新公開 repo `Jiang-Yude/elon-musk-live-skill` 的 live-data。
+
+1. 由 Codex App 自動化使用 repo 的本機絕對路徑執行每日更新腳本。公開 repo 文件不寫入本機絕對路徑，避免把個人環境路徑推上 GitHub。
+
+   ```bash
+   bash scripts/run_daily_update.sh
+   ```
+
+2. 讀取 `references/source-config.json`。
+3. 抓取 RSS 新聞與評論，標記為 `news_report` 或 `news_commentary`。
+4. 嘗試讀取 `@elonmusk` 公開 X 個人頁 7 天內可見貼文，標記為 `musk_direct_public_web`。
+5. 若環境變數 `X_BEARER_TOKEN` 存在，額外抓取 `@elonmusk` X API，標記為 `musk_direct`。
+6. 用 `references/live-data/state/seen-ids.json` 去重。
+7. 寫入當日 JSONL 原始資料：`references/live-data/raw/YYYY-MM-DD.jsonl`。
+8. 產出每日 Markdown 摘要：`references/live-data/daily/YYYY-MM-DD daily-digest.md`。
+9. 確認 digest 開頭有「來源說明」免責句，提醒讀者新聞與評論只是參考，不代表 Elon Musk 本人立場，也不代表本技能包作者立場。
+10. 記錄錯誤到 `references/live-data/logs/`。
+11. 若 `raw/` 或 `daily/` 有新變更，push 前先做敏感掃描，確認沒有 token、API key、密碼、email、本機絕對路徑或任何像個資／登入憑證的字串，再 commit 並 push 到 `origin main`。
 
 ## 每日更新不做什麼
 
 - 不自動改 `SKILL.md`
 - 不自動宣稱人格改變
+- 不在每日任務內做 promotion
 - 不發文
 - 不留言
 - 不抓登入牆或付費牆內容
 - 不把 API token 寫進檔案
+- 不把新聞報導或評論寫成 Elon Musk 本人立場
+- 不對新聞做價值判斷；新聞只作為提醒與參考，重要性需人工審核
 
 ## 排程
 
@@ -44,7 +57,16 @@ Codex App 內建自動化：
 - id：`ai-4`
 - 位置：Codex App 左側「自動化」清單
 
-預設每天台灣時間 08:30 執行一次。
+預設每天台灣時間早上執行一次。實際時間以 Codex App 自動化設定為準。
+
+自動化指令要求回報：
+
+- 新增項目數
+- 來源類型分布：`musk_direct` / `company_primary` / `news_report` / `news_commentary`
+- digest 熱門候選前三則
+- 若 `musk_direct` 為 0，明寫「今日無本人直接內容，全為媒體」
+- 錯誤或略過來源
+- 本次是否有 push
 
 ## 失敗處理
 
@@ -65,3 +87,5 @@ Codex App 內建自動化：
 每週讀最近 7 份 daily digest，依 `promotion-gate.md` 判斷是否產出更新候選。
 
 候選先進 `references/live-data/review-queue/`，等 Claude 或另一模型補審後再改正式 `SKILL.md`。
+
+每日任務若覺得某筆資料重要，也只能寫一則更新候選到 `references/live-data/review-queue/`；promotion 等人工跨模型補審，不在每日任務做。
