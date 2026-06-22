@@ -1,6 +1,6 @@
 # elon-musk-live-skill
 
-![活的馬斯克技能包海報](assets/live-musk-skill-poster.png)
+![活的馬斯克技能包海報](assets/live-musk-skill-poster.jpg)
 
 活的馬斯克技能包。這不是馬斯克本人，也不冒充本人發言；它是一個以公開資料為基礎、可每日更新、可追溯、可審核的 inspired-by 思維顧問技能包。
 
